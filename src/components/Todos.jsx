@@ -1,6 +1,7 @@
 import React from "react";
 
-const Todos = () => {
+const Todos = ({todos}) => {
+//   console.log(todos);
   return (
     <>
       <div className="container">
@@ -12,17 +13,22 @@ const Todos = () => {
               <th scope="col">Action</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>
-            <button className="btn btn-warning mx-3">Add</button>
-            <button className="btn btn-danger mx-3">Delete</button>
-
-              </td>
-            </tr>
-          </tbody>
+          {todos.map((d) => {
+            return (
+              <>
+                <tbody key={d.id}>
+                  <tr>
+                    <td>{d.title}</td>
+                    <td>{d.description}</td>
+                    <td>
+                      <button className="btn btn-warning mx-3">Add</button>
+                      <button className="btn btn-danger mx-3">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </>
+            );
+          })}
         </table>
       </div>
     </>
