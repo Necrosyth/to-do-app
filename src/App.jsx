@@ -25,7 +25,7 @@ const App = () => {
     <>
       <div className="container">
         <h1 className="text-center">To-Do List App</h1>
-        <Form />
+        <Form todos={todos} setTodos={setTodos}/>
         <Todos todos={todos} />
       </div>
     </>
