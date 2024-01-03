@@ -10,7 +10,7 @@ const Todos = ({todos}) => {
             <tr>
               <th scope="col">Title</th>
               <th scope="col">Description</th>
-              <th scope="col">Action</th>
+              <th scope="col">Act</th>
             </tr>
           </thead>
           {todos.map((d) => {
